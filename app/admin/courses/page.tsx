@@ -1,7 +1,7 @@
 import { adminGetCourses } from "@/app/data/admin/admin-get-courses";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { AdminCourseCard } from "./_combonents/AdminCourseCard";
+import { AdminCourseCard } from "./_components/AdminCourseCard";
 
 export default async function CoursesPage() {
   const data = await adminGetCourses();
