@@ -8,7 +8,9 @@ export function RichTextEditor({ field }: { field: any }) {
   const editor = useEditor({
     extensions: [
       StarterKit,
-      TextAlign.configure({ types: ["heading", "paragraph"] }),
+      TextAlign.configure({
+        types: ["heading", "paragraph"],
+      }),
     ],
 
     editorProps: {
