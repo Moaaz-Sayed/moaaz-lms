@@ -5,7 +5,7 @@ import { RenderDescription } from "@/components/rich-text-editor/RenderDescripti
 import { Button } from "@/components/ui/button";
 import { tryCatch } from "@/hooks/try-catch";
 import { useConfetti } from "@/hooks/use-confetti";
-import { useConstructUrl } from "@/hooks/use-construct-url";
+import { constructUrl } from "@/hooks/use-construct-url";
 import { BookIcon, CheckCircle } from "lucide-react";
 import { useTransition } from "react";
 import { toast } from "sonner";
@@ -27,8 +27,8 @@ export function CourseContent({ data }: iAppProps) {
     thumbnailKey: string;
     videoKey: string;
   }) {
-    const videoUrl = useConstructUrl(videoKey);
-    const thumbnailUrl = useConstructUrl(thumbnailKey);
+    const videoUrl = constructUrl(videoKey);
+    const thumbnailUrl = constructUrl(thumbnailKey);
 
     if (!videoKey) {
       return (

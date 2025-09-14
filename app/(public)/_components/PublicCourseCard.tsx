@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useConstructUrl } from "@/hooks/use-construct-url";
+import { constructUrl } from "@/hooks/use-construct-url";
 import { School, TimerIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +13,7 @@ interface iAppProps {
 }
 
 export function PublicCourseCard({ data }: iAppProps) {
-  const thumbnailUrl = useConstructUrl(data.fileKey);
+  const thumbnailUrl = constructUrl(data.fileKey);
 
   return (
     <Card className="group relative py-0 gap-0">
