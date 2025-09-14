@@ -35,7 +35,7 @@ export function CourseContent({ data }: iAppProps) {
         <div className="aspect-video bg-muted rounded-lg flex flex-col items-center justify-center">
           <BookIcon className="size-16 text-primary mx-auto mb-4" />
           <p className="text-muted-foreground">
-            This Lesson doesn't have a lesson yet
+            This Lesson does not have a lesson yet
           </p>
         </div>
       );

@@ -20,8 +20,8 @@ export default function NotAdminRoute() {
 
           <CardTitle className="text-2xl">Access Restricted</CardTitle>
           <CardDescription className="mx-w-xs mx-auto">
-            Hey! You are not an admin, which means you can't create any courses
-            or stuff like that...
+            Hey! You are not an admin, which means you can not create any
+            courses or stuff like that...
           </CardDescription>
         </CardHeader>
         <CardContent>

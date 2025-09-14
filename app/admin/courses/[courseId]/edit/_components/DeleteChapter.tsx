@@ -57,7 +57,7 @@ export function DeleteChapter({
         <AlertDialogHeader>
           <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
           <AlertDialogDescription>
-            This action can't be undone. This will permanently delete this
+            This action can not be undone. This will permanently delete this
             Chapter.
           </AlertDialogDescription>
         </AlertDialogHeader>

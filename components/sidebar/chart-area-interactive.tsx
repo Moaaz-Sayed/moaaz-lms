@@ -19,39 +19,6 @@ import { useMemo } from "react";
 
 export const description = "An interactive area chart";
 
-const dummyEnrollmentData = [
-  { date: "2025-05-01", enrollments: 12 },
-  { date: "2025-05-02", enrollments: 12 },
-  { date: "2025-05-03", enrollments: 13 },
-  { date: "2025-05-04", enrollments: 14 },
-  { date: "2025-05-05", enrollments: 65 },
-  { date: "2025-05-06", enrollments: 26 },
-  { date: "2025-05-07", enrollments: 55 },
-  { date: "2025-05-08", enrollments: 56 },
-  { date: "2025-05-09", enrollments: 35 },
-  { date: "2025-05-10", enrollments: 53 },
-  { date: "2025-05-11", enrollments: 46 },
-  { date: "2025-05-12", enrollments: 53 },
-  { date: "2025-05-13", enrollments: 15 },
-  { date: "2025-05-14", enrollments: 51 },
-  { date: "2025-05-15", enrollments: 57 },
-  { date: "2025-05-16", enrollments: 47 },
-  { date: "2025-05-17", enrollments: 37 },
-  { date: "2025-05-18", enrollments: 64 },
-  { date: "2025-05-19", enrollments: 52 },
-  { date: "2025-05-20", enrollments: 15 },
-  { date: "2025-05-21", enrollments: 31 },
-  { date: "2025-05-22", enrollments: 51 },
-  { date: "2025-05-23", enrollments: 21 },
-  { date: "2025-05-24", enrollments: 60 },
-  { date: "2025-05-25", enrollments: 50 },
-  { date: "2025-05-26", enrollments: 32 },
-  { date: "2025-05-27", enrollments: 40 },
-  { date: "2025-05-28", enrollments: 30 },
-  { date: "2025-05-29", enrollments: 19 },
-  { date: "2025-05-30", enrollments: 11 },
-];
-
 const chartConfig = {
   enrollments: {
     label: "Enrollments",
