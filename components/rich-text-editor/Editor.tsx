@@ -2,9 +2,18 @@
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import TextAlign from "@tiptap/extension-text-align";
+import { ControllerRenderProps } from "react-hook-form";
 import Menubar from "./Menubar";
 
-export function RichTextEditor({ field }: { field: any }) {
+type CourseFormValues = {
+  description: string;
+};
+
+type RichTextEditorProps = {
+  field: ControllerRenderProps<CourseFormValues, "description">;
+};
+
+export function RichTextEditor({ field }: RichTextEditorProps) {
   const editor = useEditor({
     extensions: [
       StarterKit,

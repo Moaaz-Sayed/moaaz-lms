@@ -10,6 +10,7 @@ import { useEffect } from "react";
 export default function PaymentSuccessful() {
   const { triggerConfetti } = useConfetti();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     triggerConfetti();
   }, []);
