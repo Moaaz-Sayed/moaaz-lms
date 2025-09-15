@@ -2,6 +2,7 @@ import { getIndividualCourse } from "@/app/data/course/get-course";
 import { checkIfCourseBought } from "@/app/data/user/user-is-enrolled";
 import { RenderDescription } from "@/components/rich-text-editor/RenderDescription";
 import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Collapsible,
@@ -9,7 +10,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
-import { constructUrl } from "@/hooks/use-construct-url";
+import { env } from "@/lib/env";
 import {
   IconBook,
   IconCategory,
@@ -22,7 +23,6 @@ import { CheckIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { EnrollmentButton } from "./_components/EnrollmentButton";
-import { buttonVariants } from "@/components/ui/button";
 
 type Params = Promise<{ slug: string }>;
 
@@ -32,7 +32,7 @@ export default async function SlugPage({ params }: { params: Params }) {
   const course = await getIndividualCourse(slug);
   const isEnrolled = await checkIfCourseBought(course.id);
 
-  const thumbnailUrl = constructUrl(course.fileKey);
+  const thumbnailUrl = `https://${env.NEXT_PUBLIC_S3_BUCKET_NAME_IMAGES}.t3.storage.dev/${course.fileKey}`;
 
   return (
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 mt-5">
