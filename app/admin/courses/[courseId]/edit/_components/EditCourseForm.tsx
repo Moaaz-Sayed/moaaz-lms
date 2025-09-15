@@ -160,7 +160,9 @@ export function EditCourseForm({ data }: iAppProps) {
             <FormItem className="w-full">
               <FormLabel>Description</FormLabel>
               <FormControl>
-                <RichTextEditor field={field} />
+                <RichTextEditor
+                  field={{ ...field, value: field.value ?? "" }}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
