@@ -10,6 +10,11 @@ import {
   AdminCourseCardSkeleton,
 } from "./courses/_components/AdminCourseCard";
 import { Suspense } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Admin Dashboard",
+};
 
 export default async function AdminIndexPage() {
   const enrollmentData = await adminGetEnrollmentStats();

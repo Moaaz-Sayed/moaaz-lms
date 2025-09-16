@@ -3,6 +3,11 @@ import { PublicCourseCard } from "../(public)/_components/PublicCourseCard";
 import { getAllCourses } from "../data/course/get-all-courses";
 import { getEnrolledCourses } from "../data/user/get-enrolled-courses";
 import { CourseProgressCard } from "./_components/CourseProgressCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dashboard",
+};
 
 export default async function DashboardPage() {
   const [courses, enrolledCourses] = await Promise.all([
