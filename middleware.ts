@@ -36,6 +36,12 @@ const aj = arcjet({
 });
 // Pass any existing middleware with the optional existingMiddleware prop
 export default createMiddleware(aj, async (request: NextRequest) => {
+  const { pathname } = request.nextUrl;
+
+  if (pathname.startsWith("/api/webhook/stripe")) {
+    return NextResponse.next();
+  }
+
   if (request.nextUrl.pathname.startsWith("/admin")) {
     return authMiddleware(request);
   }
